@@ -90,13 +90,14 @@ const LandingPage = () => {
               Kultura adalah ruang bersama untuk mengenal, mendokumentasikan, dan menghidupkan praktik budaya Nusantara—melalui para pelakunya.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/25 hover:-translate-y-0.5">
+              <a href="#tentang" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/25 hover:-translate-y-0.5">
                 Jelajahi Kultura
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-primary-300 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300">
-                Gabung sebagai Volunteer
-              </button>
+              </a>
+              <a href="#volunteer" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-primary-300 hover:text-primary-600 hover:bg-primary-50 transition-all duration-300">
+                <span>Gabung sebagai Volunteer</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
           
@@ -105,14 +106,13 @@ const LandingPage = () => {
             <div className="relative w-full h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl transform rotate-6 opacity-20"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-primary-300 rounded-3xl transform -rotate-6 opacity-20"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl border-2 border-primary-200/50 flex items-center justify-center shadow-2xl">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg">
-                    <Users className="w-16 h-16 text-white" />
-                  </div>
-                  <p className="text-sm text-primary-700 font-medium">Visual Asset Area</p>
-                  <p className="text-xs text-primary-600 mt-1">Replace with cultural imagery</p>
-                </div>
+              <div className="relative w-full h-full rounded-3xl border-2 border-primary-200/50 overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" 
+                  alt="Budaya Nusantara - Indonesian traditional culture" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -137,13 +137,13 @@ const LandingPage = () => {
               {/* Decorative Image Frame */}
               <div className="mt-12 relative hidden md:block">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary-200 to-primary-300 rounded-2xl opacity-20 blur-xl"></div>
-                <div className="relative bg-gradient-to-br from-primary-50 to-white rounded-xl border-2 border-primary-100 p-8 shadow-lg">
-                  <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <FileText className="w-16 h-16 text-primary-400 mx-auto mb-3" />
-                      <p className="text-sm text-primary-600 font-medium">Image Placeholder</p>
-                      <p className="text-xs text-primary-500 mt-1">Cultural documentation</p>
-                    </div>
+                <div className="relative bg-gradient-to-br from-primary-50 to-white rounded-xl border-2 border-primary-100 p-4 shadow-lg overflow-hidden">
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <img 
+                      src="https://images.pexels.com/photos/3184435/pexels-photo-3184435.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop" 
+                      alt="Dokumentasi budaya Nusantara - Indonesian cultural documentation" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -211,70 +211,35 @@ const LandingPage = () => {
           
           {/* Decorative Visual Element */}
           <div className="mt-16 grid grid-cols-3 gap-4 max-w-2xl">
-            <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center shadow-lg">
-              <Users className="w-12 h-12 text-primary-600" />
-            </div>
-            <div className="aspect-square bg-gradient-to-br from-primary-200 to-primary-300 rounded-2xl flex items-center justify-center shadow-lg">
-              <FileText className="w-12 h-12 text-primary-700" />
-            </div>
-            <div className="aspect-square bg-gradient-to-br from-primary-300 to-primary-400 rounded-2xl flex items-center justify-center shadow-lg">
-              <Calendar className="w-12 h-12 text-primary-800" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Ekosistem Terhubung */}
-      <section className="relative py-32 md:py-40 px-6 sm:px-8 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
-        <OrnamentShape className="top-20 left-20 hidden lg:block" />
-        <GeometricShape className="bottom-32 right-10 hidden md:block" />
-        
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-20">
-            <div className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-              Ekosistem
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-              Terhubung & Berkelanjutan
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Setiap elemen saling terhubung dalam dokumentasi yang berkelanjutan—membentuk living archive yang terus berkembang.
-            </p>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="group relative p-10 bg-white rounded-2xl border-2 border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div className="pt-8">
-                  <h3 className="text-2xl font-bold mb-3 text-gray-900">Pelaku Budaya</h3>
-                  <p className="text-gray-600 leading-relaxed">Pusat ekosistem</p>
-                </div>
-              </div>
-              <div className="group relative p-10 bg-white rounded-2xl border-2 border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <div className="pt-8">
-                  <h3 className="text-2xl font-bold mb-3 text-gray-900">Karya Budaya</h3>
-                  <p className="text-gray-600 leading-relaxed">Hasil praktik</p>
-                </div>
-              </div>
-              <div className="group relative p-10 bg-white rounded-2xl border-2 border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-xl">
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Calendar className="w-8 h-8 text-white" />
-                </div>
-                <div className="pt-8">
-                  <h3 className="text-2xl font-bold mb-3 text-gray-900">Peristiwa Budaya</h3>
-                  <p className="text-gray-600 leading-relaxed">Perjumpaan hidup</p>
-                </div>
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative group">
+              <img 
+                src="https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" 
+                alt="Pelaku budaya - Indonesian traditional artists and performers" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent flex items-end justify-center pb-3">
+                <Users className="w-8 h-8 text-white drop-shadow-lg" />
               </div>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-12">
-              <div className="h-px bg-gradient-to-r from-transparent via-primary-300 to-primary-600 flex-1"></div>
-              <ArrowRight className="w-6 h-6 text-primary-500" />
-              <div className="h-px bg-gradient-to-l from-transparent via-primary-300 to-primary-600 flex-1"></div>
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative group">
+              <img 
+                src="https://images.pexels.com/photos/3184435/pexels-photo-3184435.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" 
+                alt="Karya budaya - Indonesian traditional arts and crafts" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent flex items-end justify-center pb-3">
+                <FileText className="w-8 h-8 text-white drop-shadow-lg" />
+              </div>
+            </div>
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative group">
+              <img 
+                src="https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" 
+                alt="Peristiwa budaya - Indonesian cultural events and festivals" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent flex items-end justify-center pb-3">
+                <Calendar className="w-8 h-8 text-white drop-shadow-lg" />
+              </div>
             </div>
           </div>
         </div>
@@ -283,6 +248,8 @@ const LandingPage = () => {
       {/* Tiga Pilar Kultura */}
       <section id="pilar" className="relative py-32 md:py-40 px-6 sm:px-8 overflow-hidden">
         <DecorativeCircle className="w-96 h-96 top-1/4 -right-48 opacity-30" />
+        <OrnamentShape className="top-20 left-20 hidden lg:block" />
+        <GeometricShape className="bottom-32 right-10 hidden md:block" />
         
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
@@ -292,6 +259,9 @@ const LandingPage = () => {
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Tiga Pilar Kultura
             </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Setiap elemen saling terhubung dalam dokumentasi yang berkelanjutan—membentuk living archive yang terus berkembang.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group p-10 bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
@@ -548,10 +518,10 @@ const LandingPage = () => {
                 <p className="text-sm font-semibold text-white">Komunitas</p>
               </div>
             </div>
-            <button className="group inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5lAqhTbV4lpLmbcxmmv7m_KUSuZQ2wKvfrAa89Y72gOcPYw/viewform?usp=dialog" target="_blank" className="group inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
               Daftar Volunteer
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
